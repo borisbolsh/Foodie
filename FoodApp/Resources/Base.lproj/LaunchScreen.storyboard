@@ -17,19 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="GKa-36-6V1">
-                                <rect key="frame" x="129" y="344" width="156" height="208.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CTT-J6-Qfm">
+                                <rect key="frame" x="133" y="349.5" width="148" height="197"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="XOd-gZ-C0S">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="156"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="appIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cpJ-l8-G90">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="148"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="156" id="AAl-vW-ca8"/>
-                                            <constraint firstAttribute="height" constant="156" id="KIl-vO-lkJ"/>
+                                            <constraint firstAttribute="height" constant="148" id="Dau-9P-Vu6"/>
+                                            <constraint firstAttribute="width" constant="148" id="E6a-0W-G6o"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foodie" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNq-l3-jyd">
-                                        <rect key="frame" x="39.5" y="181" width="77.5" height="27.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="23"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foodie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDt-fg-XEm">
+                                        <rect key="frame" x="36.5" y="168" width="75.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -39,8 +39,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GKa-36-6V1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oEK-aF-zlc"/>
-                            <constraint firstItem="GKa-36-6V1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="so7-6d-cVX"/>
+                            <constraint firstItem="CTT-J6-Qfm" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Eay-Mc-7W0"/>
+                            <constraint firstItem="CTT-J6-Qfm" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Mz6-m7-qTa"/>
                         </constraints>
                     </view>
                 </viewController>

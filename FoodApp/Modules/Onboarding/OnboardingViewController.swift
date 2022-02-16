@@ -7,6 +7,16 @@ final class OnboardingViewController: UIViewController {
   @IBOutlet weak var pageControl: UIPageControl!
 
   var slides: [OnboardingSlide] = []
+  var currentPage = 0 {
+    didSet {
+      pageControl.currentPage = currentPage
+      if currentPage == slides.count - 1 {
+        nextButton.setTitle("Get Started", for: .normal)
+      } else {
+        nextButton.setTitle("Next", for: .normal)
+      }
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -21,7 +31,13 @@ final class OnboardingViewController: UIViewController {
   }
 
   @IBAction func nextBtnTapped(_ sender: UIButton) {
-    
+    if currentPage == slides.count - 1 {
+      print("go to the next page")
+    } else {
+      currentPage += 1
+      let indexPath = IndexPath(item: currentPage, section: 0)
+      collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
   }
 
   func setupUI(){
@@ -31,6 +47,7 @@ final class OnboardingViewController: UIViewController {
   func configurateCollectionView() {
     collectionView.delegate = self
     collectionView.dataSource = self
+    collectionView.register(UINib(nibName: String(describing: OnboardingCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: OnboardingCollectionViewCell.identifier)
   }
 }
 
@@ -54,4 +71,17 @@ extension OnboardingViewController: UICollectionViewDataSource {
 
 extension OnboardingViewController: UICollectionViewDelegate {
 
+}
+
+extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(
+      width: collectionView.frame.width,
+      height: collectionView.frame.height
+    )
+  }
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    let width = scrollView.frame.width
+    currentPage = Int(scrollView.contentOffset.x / width)
+  }
 }
