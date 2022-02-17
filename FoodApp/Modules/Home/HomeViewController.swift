@@ -9,8 +9,7 @@ final class HomeViewController: UIViewController {
     self.title = "Foodie"
 
     let button1 = UIBarButtonItem(
-//      image: UIImage(named: "cart.circle.fill"),
-      title: "button",
+      image: UIImage(named: "cart"),
       style: .plain,
       target: self,
       action: #selector(cartTapped)

@@ -47,9 +47,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		453B9F1227BEE0A400D4F1E7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		453F9BED27BE0B4900329A26 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				453B9F1227BEE0A400D4F1E7 /* Cells */,
 				453F9BEE27BE0B6B00329A26 /* HomeViewController.swift */,
 				453F9BEF27BE0B6B00329A26 /* HomeViewController.xib */,
 			);
