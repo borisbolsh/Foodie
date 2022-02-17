@@ -15,7 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       window?.backgroundColor = .white
     }
 
-    window?.rootViewController = OnboardingViewController()
+    // TODO: - Change to coordinator
+    UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+    UINavigationBar.appearance().shadowImage = UIImage()
+    UINavigationBar.appearance().tintColor = .black
+  
+    let navController = UINavigationController(rootViewController: HomeViewController())
+
+    window?.rootViewController = navController
     window?.makeKeyAndVisible()
     return true
   }

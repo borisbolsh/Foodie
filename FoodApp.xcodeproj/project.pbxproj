@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453F9BF027BE0B6B00329A26 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F9BEE27BE0B6B00329A26 /* HomeViewController.swift */; };
+		453F9BF127BE0B6B00329A26 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453F9BEF27BE0B6B00329A26 /* HomeViewController.xib */; };
 		45F7333127BD88140046D083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F7333027BD88140046D083 /* AppDelegate.swift */; };
 		45F7333A27BD88170046D083 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F7333927BD88170046D083 /* Assets.xcassets */; };
 		45F7333D27BD88170046D083 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F7333B27BD88170046D083 /* LaunchScreen.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		453F9BEE27BE0B6B00329A26 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		453F9BEF27BE0B6B00329A26 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		45F7332D27BD88140046D083 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F7333027BD88140046D083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45F7333927BD88170046D083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		453F9BED27BE0B4900329A26 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				453F9BEE27BE0B6B00329A26 /* HomeViewController.swift */,
+				453F9BEF27BE0B6B00329A26 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		45F7332427BD88140046D083 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				45F7334827BD88E30046D083 /* Onboarding */,
+				453F9BED27BE0B4900329A26 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 			files = (
 				45F7333D27BD88170046D083 /* LaunchScreen.storyboard in Resources */,
 				45F7333A27BD88170046D083 /* Assets.xcassets in Resources */,
+				453F9BF127BE0B6B00329A26 /* HomeViewController.xib in Resources */,
 				45F7335327BD88E30046D083 /* OnboardingCollectionViewCell.xib in Resources */,
 				45F7335127BD88E30046D083 /* OnboardingViewController.xib in Resources */,
 			);
@@ -209,6 +224,7 @@
 				45F7335227BD88E30046D083 /* OnboardingCollectionViewCell.swift in Sources */,
 				45F7335527BD88E30046D083 /* UIView+Extension.swift in Sources */,
 				45F7335427BD88E30046D083 /* OnboardingViewController.swift in Sources */,
+				453F9BF027BE0B6B00329A26 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
