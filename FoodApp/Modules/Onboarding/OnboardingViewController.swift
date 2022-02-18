@@ -44,7 +44,7 @@ final class OnboardingViewController: UIViewController {
   private func configurateCollectionView() {
     collectionView.delegate = self
     collectionView.dataSource = self
-    collectionView.register(UINib(nibName: String(describing: OnboardingCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: OnboardingCollectionViewCell.identifier)
+    collectionView.register(UINib(nibName: OnboardingCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: OnboardingCollectionViewCell.identifier)
   }
 }
 

@@ -1,5 +1,6 @@
 import UIKit
 
+
 final class OnboardingCollectionViewCell: UICollectionViewCell {
 
   static let identifier = String(describing: OnboardingCollectionViewCell.self)
