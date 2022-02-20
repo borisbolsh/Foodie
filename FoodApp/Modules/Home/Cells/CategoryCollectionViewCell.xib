@@ -27,6 +27,11 @@
                                     <constraint firstAttribute="height" constant="40" id="0kH-77-8ai"/>
                                     <constraint firstAttribute="width" constant="40" id="Tpg-op-bg0"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P98-2r-2J2">
                                 <rect key="frame" x="56" y="17.5" width="86" height="21"/>
