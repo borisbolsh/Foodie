@@ -27,6 +27,8 @@ final class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    NetworkService.shared.firstRequest()
+
     self.title = "Foodie"
 
     let rightBarButtonNav = UIBarButtonItem(

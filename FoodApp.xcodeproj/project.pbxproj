@@ -29,6 +29,8 @@
 		45A37D2627C2332F0081F4B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A37D2527C2332F0081F4B3 /* NetworkService.swift */; };
 		45A37D2827C2365F0081F4B3 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A37D2727C2365F0081F4B3 /* Route.swift */; };
 		45A37D2A27C2382B0081F4B3 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A37D2927C2382A0081F4B3 /* Method.swift */; };
+		45F59DFE27C419F000820C87 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F59DFD27C419F000820C87 /* AppError.swift */; };
+		45F59E0027C428AA00820C87 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F59DFF27C428AA00820C87 /* ApiResponse.swift */; };
 		45F7333127BD88140046D083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F7333027BD88140046D083 /* AppDelegate.swift */; };
 		45F7333A27BD88170046D083 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45F7333927BD88170046D083 /* Assets.xcassets */; };
 		45F7333D27BD88170046D083 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F7333B27BD88170046D083 /* LaunchScreen.storyboard */; };
@@ -65,6 +67,8 @@
 		45A37D2527C2332F0081F4B3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		45A37D2727C2365F0081F4B3 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		45A37D2927C2382A0081F4B3 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		45F59DFD27C419F000820C87 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		45F59DFF27C428AA00820C87 /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		45F7332D27BD88140046D083 /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F7333027BD88140046D083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45F7333927BD88170046D083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +201,8 @@
 			children = (
 				45A37D2527C2332F0081F4B3 /* NetworkService.swift */,
 				45A37D2727C2365F0081F4B3 /* Route.swift */,
+				45F59DFF27C428AA00820C87 /* ApiResponse.swift */,
+				45F59DFD27C419F000820C87 /* AppError.swift */,
 				45A37D2927C2382A0081F4B3 /* Method.swift */,
 			);
 			path = Networking;
@@ -439,7 +445,9 @@
 				4565479527BF5D5A00C050C1 /* DishCategory.swift in Sources */,
 				45A37D2A27C2382B0081F4B3 /* Method.swift in Sources */,
 				450FE5AF27C02CA90079FCA9 /* CardView.swift in Sources */,
+				45F59E0027C428AA00820C87 /* ApiResponse.swift in Sources */,
 				454BABB127BF5F410084D256 /* String+Extensions.swift in Sources */,
+				45F59DFE27C419F000820C87 /* AppError.swift in Sources */,
 				45F7335527BD88E30046D083 /* UIView+Extension.swift in Sources */,
 				45A37D1427C20BB60081F4B3 /* ListDishesViewController.swift in Sources */,
 				45F7335427BD88E30046D083 /* OnboardingViewController.swift in Sources */,
