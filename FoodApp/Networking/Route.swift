@@ -20,7 +20,7 @@ enum Route {
     case .fetchOrders:
       return "/orders"
     case .temp:
-      return "/dish-categories"
+      return "/dishes/cat1"
     }
   }
 }

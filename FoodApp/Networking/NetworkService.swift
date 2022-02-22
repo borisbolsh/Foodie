@@ -5,8 +5,13 @@ struct NetworkService {
   static let shared = NetworkService()
   private init() {}
 
-  func firstRequest() {
-    request(route: .temp, method: .get, type: String.self, completion: {_ in })
+  func firstRequest(completion: @escaping(Result<[Dish], Error>) -> Void) {
+    request(route: .temp, method: .get, completion: completion)
+  }
+
+  func fetchAllCategories(
+    completion: @escaping(Result<AllDishes, Error>) -> Void) {
+      request(route: .fetchAllCategories, method: .get, completion: completion)
   }
 
   private func handleResponse<T: Decodable>(
@@ -20,7 +25,9 @@ struct NetworkService {
       switch result {
       case .success(let data):
         let decoder = JSONDecoder()
-        guard let response = try? decoder.decode(ApiResponse<T>.self, from: data) else {
+        guard let response = try? decoder.decode(
+          ApiResponse<T>.self, from: data
+        ) else {
           completion(.failure(AppError.errorDecoding))
           return
         }
@@ -40,32 +47,32 @@ struct NetworkService {
       }
     }
 
-  private func request<T: Decodable>(route: Route,
-                                     method: Method,
-                                     parameters: [String: Any]? = nil,
-                                     type: T.Type,
-                                     completion: @escaping(Result<T, Error>) -> Void) {
-    guard let request = createRequest(route: route, method: method, parameters: parameters) else {
-      completion(.failure(AppError.unknownError))
-      return
+  private func request<T: Decodable>(
+    route: Route,
+    method: Method,
+    parameters: [String: Any]? = nil,
+    completion: @escaping(Result<T, Error>) -> Void) {
+      guard let request = createRequest(route: route, method: method, parameters: parameters) else {
+        completion(.failure(AppError.unknownError))
+        return
+      }
+
+      URLSession.shared.dataTask(with: request) { data, response, error in
+        var result: Result<Data, Error>?
+        if let data = data {
+          result = .success(data)
+          let responseString = String(data: data, encoding: .utf8) ?? "Could not stringify our data"
+          //        print("The response is:\n\(responseString)")
+        } else if let error = error {
+          result = .failure(error)
+          print("The error is: \(error.localizedDescription)")
+        }
+
+        DispatchQueue.main.async {
+          self.handleResponse(result: result, completion: completion)
+        }
+      }.resume()
     }
-
-    URLSession.shared.dataTask(with: request) { data, response, error in
-      var result: Result<Data, Error>?
-      if let data = data {
-        result = .success(data)
-        let responseString = String(data: data, encoding: .utf8) ?? "Could not stringify our data"
-        print("The response is:\n\(responseString)")
-      } else if let error = error {
-        result = .failure(error)
-        print("The error is: \(error.localizedDescription)")
-      }
-
-      DispatchQueue.main.async {
-        //        self.handleResponse(result: result, completion: completion)
-      }
-    }.resume()
-  }
 
   func createRequest(route: Route,
                      method: Method,

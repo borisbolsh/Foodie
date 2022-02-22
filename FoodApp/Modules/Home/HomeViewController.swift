@@ -1,4 +1,5 @@
 import UIKit
+import ProgressHUD
 
 final class HomeViewController: UIViewController {
   @IBOutlet weak var categoryCollectionView: UICollectionView!
@@ -27,7 +28,17 @@ final class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    NetworkService.shared.firstRequest()
+//    NetworkService.shared.firstRequest { (result) in
+//      switch result {
+//      case .success(let data):
+////        print("The decoded data is: \(data)")
+//        for dish in data {
+//          print(dish.name ?? "no")
+//        }
+//      case .failure(let error):
+//        print("The error is: \(error.localizedDescription)")
+//      }
+//    }
 
     self.title = "Foodie"
 
@@ -41,6 +52,23 @@ final class HomeViewController: UIViewController {
     self.navigationItem.rightBarButtonItem = rightBarButtonNav
     
     configurateCollectionViews()
+
+    ProgressHUD.show()
+    NetworkService.shared.fetchAllCategories { [weak self] (result) in
+      switch result {
+      case .success(let allDishes):
+        ProgressHUD.dismiss()
+        self?.categories = allDishes.categories ?? []
+        self?.populars = allDishes.populars ?? []
+        self?.specials = allDishes.specials ?? []
+
+        self?.categoryCollectionView.reloadData()
+        self?.popularCollectionView.reloadData()
+        self?.specialsCollectionView.reloadData()
+      case .failure(let error):
+        ProgressHUD.showError(error.localizedDescription)
+      }
+    }
   }
 
   private func configurateCollectionViews() {

@@ -13,6 +13,7 @@
 		452BA77027C148B2000905FC /* DishLandscapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452BA76E27C148B2000905FC /* DishLandscapeCollectionViewCell.xib */; };
 		452BA77327C1567B000905FC /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452BA77127C1567B000905FC /* DishDetailViewController.swift */; };
 		452BA77427C1567B000905FC /* DishDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 452BA77227C1567B000905FC /* DishDetailViewController.xib */; };
+		453445E027C4AC7900057BFA /* AllDishes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453445DF27C4AC7900057BFA /* AllDishes.swift */; };
 		453F9BF027BE0B6B00329A26 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453F9BEE27BE0B6B00329A26 /* HomeViewController.swift */; };
 		453F9BF127BE0B6B00329A26 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453F9BEF27BE0B6B00329A26 /* HomeViewController.xib */; };
 		454BABB127BF5F410084D256 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BABB027BF5F410084D256 /* String+Extensions.swift */; };
@@ -51,6 +52,7 @@
 		452BA76E27C148B2000905FC /* DishLandscapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishLandscapeCollectionViewCell.xib; sourceTree = "<group>"; };
 		452BA77127C1567B000905FC /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
 		452BA77227C1567B000905FC /* DishDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishDetailViewController.xib; sourceTree = "<group>"; };
+		453445DF27C4AC7900057BFA /* AllDishes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDishes.swift; sourceTree = "<group>"; };
 		453F9BEE27BE0B6B00329A26 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		453F9BEF27BE0B6B00329A26 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		454BABB027BF5F410084D256 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				4565479427BF5D5A00C050C1 /* DishCategory.swift */,
 				45FCE79927C0E4C2003CE1C7 /* Dish.swift */,
+				453445DF27C4AC7900057BFA /* AllDishes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				454BABB127BF5F410084D256 /* String+Extensions.swift in Sources */,
 				45F59DFE27C419F000820C87 /* AppError.swift in Sources */,
 				45F7335527BD88E30046D083 /* UIView+Extension.swift in Sources */,
+				453445E027C4AC7900057BFA /* AllDishes.swift in Sources */,
 				45A37D1427C20BB60081F4B3 /* ListDishesViewController.swift in Sources */,
 				45F7335427BD88E30046D083 /* OnboardingViewController.swift in Sources */,
 				4565479127BF5BD200C050C1 /* CategoryCollectionViewCell.swift in Sources */,
