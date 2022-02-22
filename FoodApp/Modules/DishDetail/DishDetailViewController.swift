@@ -1,5 +1,6 @@
 import UIKit
 import Kingfisher
+import ProgressHUD
 
 final class DishDetailViewController: UIViewController {
 
@@ -24,6 +25,20 @@ final class DishDetailViewController: UIViewController {
   }
 
   @IBAction func placeOrderBtnClicked(_ sender: UIButton) {
-    
+    guard let name = nameField.text?.trimmingCharacters(in: .whitespaces),
+          !name.isEmpty else {
+            ProgressHUD.showError("Please enter your name")
+            return
+          }
+
+    ProgressHUD.show("Placing Order...")
+    NetworkService.shared.placeOrder(dishId: dish.id ?? "", name: name) { (result) in
+      switch result {
+      case .success(_):
+        ProgressHUD.showSuccess("Your order has been received. 👨🏼‍🍳")
+      case .failure(let error):
+        ProgressHUD.showError(error.localizedDescription)
+      }
+    }
   }
 }

@@ -28,18 +28,6 @@ final class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-//    NetworkService.shared.firstRequest { (result) in
-//      switch result {
-//      case .success(let data):
-////        print("The decoded data is: \(data)")
-//        for dish in data {
-//          print(dish.name ?? "no")
-//        }
-//      case .failure(let error):
-//        print("The error is: \(error.localizedDescription)")
-//      }
-//    }
-
     self.title = "Foodie"
 
     let rightBarButtonNav = UIBarButtonItem(
