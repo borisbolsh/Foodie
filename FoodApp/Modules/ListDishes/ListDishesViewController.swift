@@ -1,4 +1,5 @@
 import UIKit
+import ProgressHUD
 
 final class ListDishesViewController: UIViewController {
 
@@ -6,9 +7,9 @@ final class ListDishesViewController: UIViewController {
 
   var category: DishCategory!
   var dishes: [Dish] = [
-    Dish(id: "id1", name: "John", description: "This is the best I have This is the best I have This is the best I have This is the best I have This is the best I have This is the best", image: "https://picsum.photos/100/200", calories: 233),
-    Dish(id: "id2", name: "Hanna", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 133),
-    Dish(id: "id3", name: "Kate", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 333)
+//    Dish(id: "id1", name: "John", description: "This is the best I have This is the best I have This is the best I have This is the best I have This is the best I have This is the best", image: "https://picsum.photos/100/200", calories: 233),
+//    Dish(id: "id2", name: "Hanna", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 133),
+//    Dish(id: "id3", name: "Kate", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 333)
 
   ]
 
@@ -16,7 +17,21 @@ final class ListDishesViewController: UIViewController {
     super.viewDidLoad()
 
     title = category.name
+
+    ProgressHUD.show()
+      NetworkService.shared.fetchCategoryDishes(categoryId: category.id ?? "") { [weak self] (result) in
+          switch result {
+          case .success(let dishes):
+              ProgressHUD.dismiss()
+              self?.dishes = dishes
+              self?.listDishesTableView.reloadData()
+          case .failure(let error):
+              ProgressHUD.showError(error.localizedDescription)
+          }
+      }
+
     setupTableView()
+
   }
 
   private func setupTableView(){

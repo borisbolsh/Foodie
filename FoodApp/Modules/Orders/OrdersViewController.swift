@@ -1,47 +1,32 @@
 import UIKit
+import ProgressHUD
 
 final class OrdersViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
 
-  var orders:[Order] = [
-    Order(
-      id: "id1",
-      name: "John Doe",
-      dish: Dish(
-        id: "id2",
-        name: "Hanna",
-        description: "This is the best I have",
-        image: "https://picsum.photos/100/200",
-        calories: 19)
-    ),
-    Order(
-      id: "id2",
-      name: "Janen Kate",
-      dish: Dish(
-        id: "id2",
-        name: "Lara",
-        description: "This is the best I have",
-        image: "https://picsum.photos/100/200",
-        calories: 48)
-    ),
-    Order(
-      id: "id3",
-      name: "Nick Green",
-      dish: Dish(
-        id: "id3",
-        name: "Luck",
-        description: "This is the best I have",
-        image: "https://picsum.photos/100/200",
-        calories: 91)
-    ),
-  ]
+  var orders:[Order] = []
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
     title = "Orders"
     setupTableView()
+    ProgressHUD.show()
+  }
+
+  override func viewDidAppear(_ animated: Bool) {
+    NetworkService.shared.fetchOrders { [weak self] (result) in
+      switch result {
+      case .success(let orders):
+        ProgressHUD.dismiss()
+
+        self?.orders = orders
+        self?.tableView.reloadData()
+      case .failure(let error):
+        ProgressHUD.showError(error.localizedDescription)
+      }
+    }
   }
 
   private func setupTableView(){
@@ -73,8 +58,8 @@ extension OrdersViewController: UITableViewDataSource {
 
 extension OrdersViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      let controller = DishDetailViewController()
-      controller.dish = orders[indexPath.row].dish
-      navigationController?.pushViewController(controller, animated: true)
+    let controller = DishDetailViewController()
+    controller.dish = orders[indexPath.row].dish
+    navigationController?.pushViewController(controller, animated: true)
   }
 }

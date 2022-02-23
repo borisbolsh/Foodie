@@ -7,22 +7,22 @@ final class HomeViewController: UIViewController {
   @IBOutlet weak var specialsCollectionView: UICollectionView!
 
   var categories: [DishCategory] = [
-    DishCategory(id: "id1", name: "Africa dish 1", image: "https://picsum.photos/100/200"),
-    DishCategory(id: "id1", name: "Africa dish 2", image: "https://picsum.photos/100/200"),
-    DishCategory(id: "id1", name: "Africa dish 3", image: "https://picsum.photos/100/200"),
-    DishCategory(id: "id1", name: "Africa dish 4", image: "https://picsum.photos/100/200"),
-    DishCategory(id: "id1", name: "Africa dish 5", image: "https://picsum.photos/100/200")
+//    DishCategory(id: "id1", name: "Africa dish 1", image: "https://picsum.photos/100/200"),
+//    DishCategory(id: "id1", name: "Africa dish 2", image: "https://picsum.photos/100/200"),
+//    DishCategory(id: "id1", name: "Africa dish 3", image: "https://picsum.photos/100/200"),
+//    DishCategory(id: "id1", name: "Africa dish 4", image: "https://picsum.photos/100/200"),
+//    DishCategory(id: "id1", name: "Africa dish 5", image: "https://picsum.photos/100/200")
   ]
   var populars: [Dish] = [
-    Dish(id: "id1", name: "John", description: "This is the best I have This is the best I have This is the best I have This is the best I have This is the best I have This is the best", image: "https://picsum.photos/100/200", calories: 233),
-    Dish(id: "id2", name: "Hanna", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 133),
-    Dish(id: "id3", name: "Kate", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 333)
+//    Dish(id: "id1", name: "John", description: "This is the best I have This is the best I have This is the best I have This is the best I have This is the best I have This is the best", image: "https://picsum.photos/100/200", calories: 233),
+//    Dish(id: "id2", name: "Hanna", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 133),
+//    Dish(id: "id3", name: "Kate", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 333)
 
   ]
   var specials: [Dish] = [
-    Dish(id: "id1", name: "Beans beans 1", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 10),
-    Dish(id: "id2", name: "Beans beans 2", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 20),
-    Dish(id: "id3", name: "Beans beans 3", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 30)
+//    Dish(id: "id1", name: "Beans beans 1", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 10),
+//    Dish(id: "id2", name: "Beans beans 2", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 20),
+//    Dish(id: "id3", name: "Beans beans 3", description: "This is the best I have", image: "https://picsum.photos/100/200", calories: 30)
   ]
 
   override func viewDidLoad() {

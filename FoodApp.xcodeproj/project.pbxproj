@@ -41,6 +41,7 @@
 		45F7335327BD88E30046D083 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45F7334C27BD88E30046D083 /* OnboardingCollectionViewCell.xib */; };
 		45F7335427BD88E30046D083 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F7334D27BD88E30046D083 /* OnboardingViewController.swift */; };
 		45F7335527BD88E30046D083 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F7334F27BD88E30046D083 /* UIView+Extension.swift */; };
+		45FBE7A627C6037900F63E59 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FBE7A527C6037900F63E59 /* UserDefaults+Extension.swift */; };
 		45FCE79727C0C97A003CE1C7 /* DishPortraitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FCE79527C0C97A003CE1C7 /* DishPortraitCollectionViewCell.swift */; };
 		45FCE79827C0C97A003CE1C7 /* DishPortraitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45FCE79627C0C97A003CE1C7 /* DishPortraitCollectionViewCell.xib */; };
 		45FCE79A27C0E4C2003CE1C7 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FCE79927C0E4C2003CE1C7 /* Dish.swift */; };
@@ -82,6 +83,7 @@
 		45F7334C27BD88E30046D083 /* OnboardingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OnboardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		45F7334D27BD88E30046D083 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		45F7334F27BD88E30046D083 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		45FBE7A527C6037900F63E59 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		45FCE79527C0C97A003CE1C7 /* DishPortraitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishPortraitCollectionViewCell.swift; sourceTree = "<group>"; };
 		45FCE79627C0C97A003CE1C7 /* DishPortraitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishPortraitCollectionViewCell.xib; sourceTree = "<group>"; };
 		45FCE79927C0E4C2003CE1C7 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			children = (
 				45F7334F27BD88E30046D083 /* UIView+Extension.swift */,
 				454BABB027BF5F410084D256 /* String+Extensions.swift */,
+				45FBE7A527C6037900F63E59 /* UserDefaults+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				45A37D2627C2332F0081F4B3 /* NetworkService.swift in Sources */,
 				453F9BF027BE0B6B00329A26 /* HomeViewController.swift in Sources */,
 				45A37D1F27C221B90081F4B3 /* OrdersViewController.swift in Sources */,
+				45FBE7A627C6037900F63E59 /* UserDefaults+Extension.swift in Sources */,
 				452BA76F27C148B2000905FC /* DishLandscapeCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
