@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       window?.backgroundColor = .white
     }
 
-    // TODO: - Change to coordinator
     UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     UINavigationBar.appearance().shadowImage = UIImage()
     UINavigationBar.appearance().tintColor = .black
